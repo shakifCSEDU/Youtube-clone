@@ -9,7 +9,7 @@ const VideoPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(closeMenu);
+    dispatch(closeMenu());
   }, []);
 
   return (
