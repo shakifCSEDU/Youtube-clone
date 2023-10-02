@@ -4,10 +4,9 @@ import Head from "./components/Head";
 import { Provider } from "react-redux";
 import store from "./utlis/store";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
 import MainContainer from "./components/MainContainer";
-import WatchPage from "./components/WatchPage";
-
-
+import VideoPage from "./components/VideoPage";
 
 const appRouter = createBrowserRouter([
   {
@@ -18,13 +17,12 @@ const appRouter = createBrowserRouter([
         path:"/",
         element:<MainContainer/>
       },{
-        element:"watch",
-        element:<WatchPage/>
+        path:"watch",
+        element:<VideoPage/>
       }
     ]
   }
 ]);
-
 
 function App() {
   return (
