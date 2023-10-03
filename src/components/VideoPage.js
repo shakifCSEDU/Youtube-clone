@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utlis/appSlice";
 import { useSearchParams } from "react-router-dom";
+import CommentContainer from "./ComentContainer";
 
 const VideoPage = () => {
   const [searchParams] = useSearchParams();
@@ -13,6 +14,7 @@ const VideoPage = () => {
   }, []);
 
   return (
+    <div className="flex flex-col">
     <div>
       <iframe
         width="1200"
@@ -23,6 +25,8 @@ const VideoPage = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
+    </div>
+    <CommentContainer/>
     </div>
   );
 };
